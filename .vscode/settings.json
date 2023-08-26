@@ -1,0 +1,25 @@
+{
+  "cSpell.words": [
+    "devkit",
+    "Emad",
+    "Hajjar",
+    "ngneat",
+    "ontop",
+    "Parens"
+  ],
+  "git.ignoreLimitWarning": true,
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": false
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint",
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "editor.formatOnSave": false
+  },
+}
