@@ -1,5 +1,6 @@
 {
   "cSpell.words": [
+    "commitlint",
     "devkit",
     "Emad",
     "Hajjar",
@@ -21,5 +22,5 @@
       "source.fixAll.eslint": true
     },
     "editor.formatOnSave": false
-  },
+  }
 }
