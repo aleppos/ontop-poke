@@ -8,6 +8,7 @@
     "kamikillerto.vscode-colorize",
     "mikestead.dotenv",
     "streetsidesoftware.code-spell-checker",
-    "wayou.vscode-todo-highlight"
+    "wayou.vscode-todo-highlight",
+    "yzhang.markdown-all-in-one"
   ]
 }
