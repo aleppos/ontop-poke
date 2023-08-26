@@ -24,11 +24,11 @@ const routes: Routes = [
         redirectTo: AppRoutes.POKEMON_LIST,
         pathMatch: 'full',
       },
-      {
-        path: '**',
-        component: NotFoundComponent,
-      },
     ],
+  },
+  {
+    path: '**',
+    component: NotFoundComponent,
   },
 ];
 
