@@ -1,8 +1,6 @@
 {
   "root": true,
-  "ignorePatterns": [
-    "projects/**/*"
-  ],
+  "ignorePatterns": ["projects/**/*"],
   "overrides": [
     {
       "files": ["*.ts"],
@@ -35,7 +33,12 @@
     {
       "files": ["*.html"],
       "extends": ["plugin:@angular-eslint/template/recommended"],
-      "rules": {}
+      "rules": {
+        "@angular-eslint/template/attributes-order": [
+          "error",
+          { "alphabetical": true }
+        ]
+      }
     },
     {
       "files": ["*.html"],
