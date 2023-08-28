@@ -15,6 +15,7 @@ This is the repository for the `Ontop Technical Challenge for Front End Engineer
     - [Docker](#docker)
     - [Homebrew](#homebrew)
     - [Volta.js](#voltajs)
+    - [Chrome](#chrome)
   - [Merge Requests](#merge-requests)
   - [Tips](#tips)
     - [Create a branch from the latest `main`](#create-a-branch-from-the-latest-main)
@@ -75,6 +76,12 @@ This is defined by the `volta` field in the root `package.json`
 
 To install Volta, run `curl https://get.volta.sh | bash` or you can check out the
 official [getting started documentation](https://docs.volta.sh/guide/getting-started)
+
+### Chrome
+
+We need to have Chrome installed in order to run `yarn test`.
+
+To install Chrome, checkout out the official [Download Chrome](https://www.google.com/chrome/dr/download)
 
 ## Merge Requests
 
