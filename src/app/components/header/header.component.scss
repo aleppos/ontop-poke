@@ -1,0 +1,9 @@
+@import '../../../variables.scss';
+
+header {
+  align-items: center;
+  border-bottom: 1px solid $primary-color;
+  box-sizing: border-box;
+  display: flex;
+  height: $header-height;
+}

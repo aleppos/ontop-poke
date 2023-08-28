@@ -1,0 +1,53 @@
+$header-height: 60px;
+$footer-height: 100px;
+
+// colors
+$primary-color: #ff5a70;
+$secondary-color: #222222;
+$disabled-color: rgba(0, 0, 0, 0.26);
+
+// breakpoints
+$breakpoint-tablet: 768px;
+
+// spinner
+$spinner-offset: 187;
+$spinner-duration: 1.4s;
+
+// shine
+$offset: -4px;
+$animation-ease: ease-in-out;
+$animation-time: 200ms;
+$border-radius: inherit;
+$border-width: 2px;
+$border-color: white;
+$glare-color: white;
+$glare-opacity: 0.4;
+
+// spacing
+@function get-size($spacing) {
+  @if $spacing == auto {
+    @return auto;
+  } @else {
+    @return $spacing * 6px;
+  }
+}
+
+@mixin py($spacing: 2) {
+  padding-bottom: get-size($spacing);
+  padding-top: get-size($spacing);
+}
+
+@mixin px($spacing: 2) {
+  padding-left: get-size($spacing);
+  padding-right: get-size($spacing);
+}
+
+@mixin my($spacing: 2) {
+  margin-bottom: get-size($spacing);
+  margin-top: get-size($spacing);
+}
+
+@mixin mx($spacing: 2) {
+  margin-left: get-size($spacing);
+  margin-right: get-size($spacing);
+}

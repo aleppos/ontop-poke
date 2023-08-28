@@ -1,0 +1,10 @@
+@import '../../../variables.scss';
+
+:host {
+  width: 100%;
+}
+.divider {
+  display: flex;
+  height: 1px;
+  background-color: rgba($secondary-color, 70%);
+}

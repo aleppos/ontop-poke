@@ -1,1 +1,53 @@
-<p>pokemon-details works!</p>
+<app-container *subscribe="pokemonDetails$ as pokemonDetails">
+  <app-spinner *ngIf="pokemonDetails.isLoading"></app-spinner>
+
+  <ng-container *ngIf="pokemonDetails.isError">
+    Sorry something went wrong.
+  </ng-container>
+
+  <app-card
+    *ngIf="pokemonDetails.isSuccess"
+    [image]="'/assets/dream-world/' + pokemonDetails.data.id + '.svg'"
+    [title]="pokemonDetails.data.name"
+  >
+    <app-divider spacing="2"></app-divider>
+
+    <div>Experience: {{ pokemonDetails.data.base_experience }}</div>
+
+    <app-divider spacing="2"></app-divider>
+
+    <div>Height: {{ pokemonDetails.data.height }} cm</div>
+
+    <app-divider spacing="2"></app-divider>
+
+    <div>Weight: {{ pokemonDetails.data.weight }} kg</div>
+
+    <app-divider spacing="2"></app-divider>
+
+    <div class="group">
+      <h2>Abilities:</h2>
+
+      <ng-container *ngFor="let ability of pokemonDetails.data.abilities">
+        <div class="badge">
+          {{ ability.ability.name }}
+        </div>
+      </ng-container>
+    </div>
+
+    <app-divider spacing="2"></app-divider>
+
+    <div class="group">
+      <h2>Types:</h2>
+
+      <ng-container *ngFor="let type of pokemonDetails.data.types">
+        <div class="badge">
+          {{ type.type.name }}
+        </div>
+      </ng-container>
+    </div>
+  </app-card>
+
+  <app-spacer vertical="4"></app-spacer>
+
+  <a class="button shine" routerLink="/">Go back</a>
+</app-container>

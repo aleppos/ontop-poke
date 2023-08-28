@@ -1,0 +1,17 @@
+@import '../../../variables.scss';
+
+:host {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  font-size: 24px;
+  justify-content: center;
+
+  .page {
+    color: $secondary-color;
+
+    &.active {
+      color: $primary-color;
+    }
+  }
+}

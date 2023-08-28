@@ -1,0 +1,14 @@
+@import '../../../variables.scss';
+
+:host {
+  @include px(4);
+  @include mx(auto);
+  box-sizing: border-box;
+  display: block;
+  max-width: 1160px;
+  width: 100%;
+
+  @media (max-width: $breakpoint-tablet) {
+    @include px(2);
+  }
+}

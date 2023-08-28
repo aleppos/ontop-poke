@@ -1,0 +1,14 @@
+@import '../../../variables.scss';
+@import 'material-icons/iconfont/filled.css';
+
+:host {
+  display: inline-flex;
+}
+
+.material-icons {
+  font-size: inherit;
+
+  &.disabled {
+    color: $disabled-color;
+  }
+}

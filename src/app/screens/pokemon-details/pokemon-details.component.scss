@@ -1,0 +1,30 @@
+@import '../../../variables.scss';
+
+.group {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: get-size(1);
+  width: 100%;
+
+  > h2 {
+    margin: 0;
+  }
+}
+
+.badge {
+  background-color: white;
+  color: $primary-color;
+  display: inline-flex;
+  padding: get-size(2);
+  text-transform: uppercase;
+}
+
+.button {
+  background-color: $secondary-color;
+  color: white;
+  @include py(1);
+  @include px(3);
+  border-radius: get-size(2);
+  text-decoration: none;
+}

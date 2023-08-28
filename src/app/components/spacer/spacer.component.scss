@@ -1,0 +1,46 @@
+@import '../../../variables.scss';
+
+.spacer {
+  width: 0;
+  height: 0;
+
+  &.h1 {
+    display: inline-flex;
+    width: get-size(1);
+  }
+
+  &.h2 {
+    display: inline-flex;
+    width: get-size(2);
+  }
+
+  &.h3 {
+    display: inline-flex;
+    width: get-size(3);
+  }
+
+  &.h4 {
+    display: inline-flex;
+    width: get-size(4);
+  }
+
+  &.v1 {
+    display: flex;
+    height: get-size(1);
+  }
+
+  &.v2 {
+    display: flex;
+    height: get-size(2);
+  }
+
+  &.v3 {
+    display: flex;
+    height: get-size(3);
+  }
+
+  &.v4 {
+    display: flex;
+    height: get-size(4);
+  }
+}

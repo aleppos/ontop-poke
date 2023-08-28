@@ -1,0 +1,9 @@
+@import '../../../variables.scss';
+
+footer {
+  align-items: center;
+  background-color: $secondary-color;
+  box-sizing: border-box;
+  display: flex;
+  height: $footer-height;
+}

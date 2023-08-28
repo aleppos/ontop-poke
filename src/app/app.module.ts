@@ -1,6 +1,8 @@
-import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { ErrorHandler, NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http';
 import { provideQueryClientOptions } from '@ngneat/query';
+import { SubscribeDirective } from '@ngneat/subscribe';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -10,18 +12,41 @@ import { FooterComponent } from './components/footer/footer.component';
 import { PokemonListComponent } from './screens/pokemon-list/pokemon-list.component';
 import { PokemonDetailsComponent } from './screens/pokemon-details/pokemon-details.component';
 import { NotFoundComponent } from './screens/not-found/not-found.component';
+import { LogoComponent } from './components/logo/logo.component';
+import { ContainerComponent } from './components/container/container.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
+import { IconComponent } from './components/icon/icon.component';
+import { SpacerComponent } from './components/spacer/spacer.component';
+import { ClickDirective } from './click.directive';
+import { SpinnerComponent } from './components/spinner/spinner.component';
+import { DividerComponent } from './components/divider/divider.component';
+import { CardComponent } from './components/card/card.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    MainLayoutComponent,
-    HeaderComponent,
+    CardComponent,
+    ClickDirective,
+    ContainerComponent,
+    DividerComponent,
     FooterComponent,
-    PokemonListComponent,
-    PokemonDetailsComponent,
+    HeaderComponent,
+    IconComponent,
+    LogoComponent,
+    MainLayoutComponent,
     NotFoundComponent,
+    PaginationComponent,
+    PokemonDetailsComponent,
+    PokemonListComponent,
+    SpacerComponent,
+    SpinnerComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    AppRoutingModule,
+    BrowserModule,
+    HttpClientModule,
+    SubscribeDirective,
+  ],
   providers: [
     provideQueryClientOptions({
       defaultOptions: {
@@ -31,6 +56,7 @@ import { NotFoundComponent } from './screens/not-found/not-found.component';
         },
       },
     }),
+    { provide: ErrorHandler, useClass: ErrorHandler },
   ],
   bootstrap: [AppComponent],
 })

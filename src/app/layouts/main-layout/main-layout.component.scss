@@ -1,0 +1,16 @@
+@import '../../../variables.scss';
+
+:host {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+main {
+  flex-grow: 1;
+
+  @include my(4);
+
+  @media (max-width: $breakpoint-tablet) {
+    @include my(2);
+  }
+}

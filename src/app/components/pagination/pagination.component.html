@@ -1,0 +1,26 @@
+<ng-container *ngIf="totalPages !== null">
+  <app-icon
+    name="arrow_back_ios"
+    [disabled]="currentPage <= 1"
+    (click)="handlePageChange(currentPage - 1)"
+  ></app-icon>
+
+  <app-spacer horizontal="3"></app-spacer>
+
+  <ng-container *ngFor="let page of pages">
+    <div
+      class="page"
+      [class.active]="page === currentPage"
+      (click)="handlePageChange(page)"
+    >
+      {{ page }}
+    </div>
+    <app-spacer horizontal="3"></app-spacer>
+  </ng-container>
+
+  <app-icon
+    name="arrow_forward_ios"
+    [disabled]="currentPage >= totalPages"
+    (click)="handlePageChange(currentPage + 1)"
+  ></app-icon>
+</ng-container>

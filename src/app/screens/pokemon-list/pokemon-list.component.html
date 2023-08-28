@@ -1,1 +1,30 @@
-<p>pokemon-list works!</p>
+<app-container *subscribe="pokemons$ as pokemons">
+  <app-spinner *ngIf="pokemons.isLoading"></app-spinner>
+
+  <ng-container *ngIf="pokemons.isError">
+    Sorry something went wrong.
+  </ng-container>
+
+  <ng-container *ngIf="pokemons.isSuccess">
+    <div class="grid">
+      <app-card
+        *ngFor="let pokemon of pokemons.data.results"
+        class="shine"
+        [image]="'/assets/dream-world/' + pokemon.id + '.svg'"
+        [routerLink]="pokemon.name"
+        [title]="pokemon.name"
+      >
+      </app-card>
+    </div>
+
+    <app-spacer vertical="4"></app-spacer>
+
+    <app-pagination
+      *subscribe="page$ as page"
+      [currentPage]="page"
+      [perPage]="perPage"
+      [totalItems]="pokemons.data.count"
+      (pageChange)="handlePageChange($event)"
+    ></app-pagination>
+  </ng-container>
+</app-container>

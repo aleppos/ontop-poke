@@ -1,0 +1,12 @@
+@import '../../../variables.scss';
+
+.grid {
+  display: grid;
+  grid-gap: get-size(2);
+  grid-template-columns: repeat(4, 1fr);
+
+  @media (max-width: $breakpoint-tablet) {
+    grid-gap: get-size(1);
+    grid: auto auto / auto auto;
+  }
+}
